@@ -1,0 +1,27 @@
+Exercise 1 Answers
+
+1. Determine how many topics are in the bag:
+   Answer: 5 topics
+   (/imu/acceleration, /imu/angular_velocity, /imu/data, /zed2i/zed_node/left_gray/image_rect_gray, /system_info)
+
+2. Determine the Hz of the topic image:
+   Topic: /zed2i/zed_node/left_gray/image_rect_gray
+   Calculation: 311 messages / 10.626s
+   Answer: 29.26 Hz
+
+3. Determine the Hz of the topic system:
+   Topic: /system_info
+   Calculation: 19 messages / 10.626s
+   Answer: 1.78 Hz
+
+4. Determine what does the topic system return:
+   Answer: The message type is "sysmonitor_interfaces/msg/Sysmon".
+
+5. Create a node that publishes a message...
+   Answer: Node created in C++ (package 'my_exam_node'). 
+   See the 'src' folder in this repo for the code.
+
+Commands used:
+- ros2 bag info src/rosbag2_2024_11_22-00_32_31
+- ros2 topic hz /zed2i/zed_node/left_gray/image_rect_gray
+- ros2 topic echo /system_info --once
